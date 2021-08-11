@@ -1,50 +1,51 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "citynorth.church",
+    siteUrl: 'https://www.yourdomain.tld',
+    title: 'citynorth.church',
   },
   plugins: [
     {
-      resolve: "gatsby-source-contentful",
+      resolve: 'gatsby-source-contentful',
       options: {
-        accessToken: "ZdJAj6bTTfsC3TCBFY0VSkFoaCTBEfL_E5WrLFZUUS0",
-        spaceId: "hiqf9clqtwll",
+        accessToken: 'ZdJAj6bTTfsC3TCBFY0VSkFoaCTBEfL_E5WrLFZUUS0',
+        spaceId: 'hiqf9clqtwll',
       },
     },
-    "gatsby-plugin-gatsby-cloud",
-    "gatsby-plugin-image",
+    'gatsby-plugin-gatsby-cloud',
+    'gatsby-plugin-image',
+    // {
+    //   resolve: 'gatsby-plugin-google-analytics',
+    //   options: {
+    //     trackingId: '',
+    //   },
+    // },
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-postcss',
+    'gatsby-plugin-sitemap',
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        trackingId: "",
+        icon: 'src/images/icon.png',
       },
     },
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
+    'gatsby-transformer-remark',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        icon: "src/images/icon.png",
+        name: 'images',
+        path: './src/images/',
       },
-    },
-    "gatsby-transformer-remark",
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "images",
-        path: "./src/images/",
-      },
-      __key: "images",
+      __key: 'images',
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "pages",
-        path: "./src/pages/",
+        name: 'pages',
+        path: './src/pages/',
       },
-      __key: "pages",
+      __key: 'pages',
     },
   ],
-};
+}
