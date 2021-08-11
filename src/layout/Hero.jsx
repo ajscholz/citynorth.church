@@ -1,6 +1,7 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { Fragment } from 'react'
+import React, { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
+
 import {
   AnnotationIcon,
   ChatAlt2Icon,
