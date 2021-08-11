@@ -21,6 +21,12 @@ module.exports = {
     // },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-postcss',
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`./src/layout/index.jsx`),
+      },
+    },
     'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-manifest',
