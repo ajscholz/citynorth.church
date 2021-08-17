@@ -7,9 +7,11 @@ import HeaderBanner from './HeaderBanner'
 const Layout = ({ children, pageContext }) => {
   return (
     <>
-      <HeaderBanner />
+      {pageContext.layout !== 'error' && <HeaderBanner />}
       {pageContext.layout === 'index' ? (
         <IndexLayout>{children}</IndexLayout>
+      ) : pageContext.layout === 'error' ? (
+        <ErrorLayout>{children}</ErrorLayout>
       ) : (
         <div>
           <Hero />
@@ -31,4 +33,8 @@ const IndexLayout = ({ children }) => {
       <div>here's an index footer!</div>
     </div>
   )
+}
+
+const ErrorLayout = ({ children }) => {
+  return children
 }

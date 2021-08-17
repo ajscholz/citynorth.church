@@ -5,5 +5,8 @@ exports.onCreatePage = ({ page, actions }) => {
   if (page.path.match(/^\/$/)) {
     page.context.layout = 'index'
     createPage(page)
+  } else if (page.path.includes('404')) {
+    page.context.layout = 'error'
+    createPage(page)
   }
 }
