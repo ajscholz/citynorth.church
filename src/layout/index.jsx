@@ -2,17 +2,22 @@ import React from 'react'
 
 import Hero from './Hero'
 import IndexHero from './IndexHero'
+import HeaderBanner from './HeaderBanner'
 
 const Layout = ({ children, pageContext }) => {
-  if (pageContext.layout === 'index') {
-    return <IndexLayout>{children}</IndexLayout>
-  }
   return (
-    <div>
-      <Hero />
-      {children}
-      <div>here's a footer!</div>
-    </div>
+    <>
+      <HeaderBanner />
+      {pageContext.layout === 'index' ? (
+        <IndexLayout>{children}</IndexLayout>
+      ) : (
+        <div>
+          <Hero />
+          {children}
+          <div>here's a footer!</div>
+        </div>
+      )}
+    </>
   )
 }
 
