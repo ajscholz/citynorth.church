@@ -12,6 +12,8 @@ const Layout = ({ children, pageContext }) => {
         <IndexLayout>{children}</IndexLayout>
       ) : pageContext.layout === 'error' ? (
         <ErrorLayout>{children}</ErrorLayout>
+      ) : pageContext.layout === 'standard' ? (
+        <StandardLayout>{children}</StandardLayout>
       ) : (
         <div>
           <Hero />
@@ -36,5 +38,9 @@ const IndexLayout = ({ children }) => {
 }
 
 const ErrorLayout = ({ children }) => {
+  return children
+}
+
+const StandardLayout = ({ children }) => {
   return children
 }
