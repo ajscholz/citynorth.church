@@ -57,7 +57,7 @@ const SandboxPage = () => {
   //   ) : null
 
   return type === 'List Grid' ? (
-    <CenteredIconGrid sectionData={query.allContentfulSection.edges[0].node} />
+    <ListGrid sectionData={query.allContentfulSection.edges[0].node} />
   ) : type === 'Centered Icon Grid' ? (
     <CenteredIconGrid sectionData={query.allContentfulSection.edges[0].node} />
   ) : null
