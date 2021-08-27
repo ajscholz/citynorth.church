@@ -1,5 +1,7 @@
 import * as React from 'react'
 
+import { graphql } from 'gatsby'
+
 // styles
 const pageStyles = {
   color: '#232129',
@@ -126,10 +128,12 @@ const links = [
 ]
 
 // markup
-const IndexPage = () => {
+const IndexPageTemplate = ({ data }) => {
+  const { page } = data
+
   return (
     <main style={pageStyles}>
-      <title>Home Page</title>
+      <title>{page.title}</title>
       <h1 style={headingStyles}>
         Congratulations
         <br />
@@ -181,4 +185,12 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export default IndexPageTemplate
+
+export const query = graphql`
+  query ($slug: String!) {
+    page: contentfulPage(slug: { eq: $slug }) {
+      title
+    }
+  }
+`

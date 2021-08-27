@@ -2,13 +2,48 @@ exports.onCreatePage = ({ page, actions }) => {
   const { createPage } = actions
 
   // create an index-specific layout for a different hero
-  if (page.path.match(/^\/$/)) {
-    page.context.layout = 'index'
-  } else if (page.path.includes('404')) {
+  if (page.path.includes('404')) {
     page.context.layout = 'error'
-  } else {
-    page.context.layout = 'standard'
   }
 
   createPage(page)
+}
+
+exports.createPages = async function ({ actions, graphql }) {
+  const { data } = await graphql(`
+    query {
+      allContentfulPage {
+        edges {
+          node {
+            slug
+          }
+        }
+      }
+    }
+  `)
+
+  data.allContentfulPage.edges.forEach(({ node }) => {
+    const slug = node.slug
+
+    const attrs =
+      slug === '/'
+        ? {
+            component: require.resolve('./src/templates/IndexPage.jsx'),
+            context: { slug: slug, layout: 'index' },
+          }
+        : slug === '/sandbox'
+        ? {
+            component: require.resolve('./src/templates/SandboxTemplate.jsx'),
+            context: { slug: slug, layout: 'standard' },
+          }
+        : {
+            component: require.resolve('./src/templates/StandardPage.jsx'),
+            context: { slug: slug, layout: 'standard' },
+          }
+
+    actions.createPage({
+      path: slug,
+      ...attrs,
+    })
+  })
 }

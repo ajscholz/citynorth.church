@@ -1,13 +1,18 @@
 import React from 'react'
 
-import Hero from './Hero'
 import IndexHero from './IndexHero'
 import HeaderBanner from './HeaderBanner'
+import Navigation from '../components/interactive/Navigation'
 
 const Layout = ({ children, pageContext }) => {
   return (
     <>
-      {pageContext.layout !== 'error' && <HeaderBanner />}
+      {pageContext.layout !== 'error' && (
+        <>
+          <HeaderBanner />
+          <Navigation />
+        </>
+      )}
       {pageContext.layout === 'index' ? (
         <IndexLayout>{children}</IndexLayout>
       ) : pageContext.layout === 'error' ? (
@@ -16,7 +21,7 @@ const Layout = ({ children, pageContext }) => {
         <StandardLayout>{children}</StandardLayout>
       ) : (
         <div>
-          <Hero />
+          {/* <Hero /> */}
           {children}
           <div>here's a footer!</div>
         </div>
