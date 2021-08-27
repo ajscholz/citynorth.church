@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { setupFeatures } from './'
+import { setupFeatures } from '.'
 
 const BrandGrid = ({ sectionData }) => {
   const { features, title, description } = sectionData

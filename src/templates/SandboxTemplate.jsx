@@ -3,12 +3,12 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 // import { section } from '../data/testData'
-import ListGrid from '../layout/sections/features/ListGrid'
-import CenteredIconGrid from '../layout/sections/features/CenteredIconGrid'
-import List from '../layout/sections/features/List'
-import OffsetGrid from '../layout/sections/features/OffsetGrid'
-import ThreeColSimple from '../layout/sections/features/ThreeColSimple'
-import BrandGrid from '../layout/sections/features/BrandGrid'
+import ListGrid from '../components/layout/sections/features/ListGrid'
+import CenteredIconGrid from '../components/layout/sections/features/CenteredIconGrid'
+import List from '../components/layout/sections/features/List'
+import OffsetGrid from '../components/layout/sections/features/OffsetGrid'
+import ThreeColSimple from '../components/layout/sections/features/ThreeColSimple'
+import BrandGrid from '../components/layout/sections/features/BrandGrid'
 
 const SandboxPage = ({ data }) => {
   const { page } = data

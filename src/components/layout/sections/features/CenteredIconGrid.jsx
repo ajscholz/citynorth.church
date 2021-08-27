@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { setupFeatures } from './'
-import Heroicon from '../../../components/Heroicon'
-import ContentfulRichText from '../../../components/ContentfulRichText'
+import { setupFeatures } from '.'
+import Heroicon from '../../../Heroicon'
+import ContentfulRichText from '../../../ContentfulRichText'
 
 const CenteredIconGrid = ({ sectionData }) => {
   const { contentBlocks, title, subtitle, body } = sectionData

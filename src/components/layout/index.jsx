@@ -2,7 +2,7 @@ import React from 'react'
 
 import IndexHero from './IndexHero'
 import HeaderBanner from './HeaderBanner'
-import Navigation from '../components/interactive/Navigation'
+import Navigation from '../interactive/Navigation'
 
 const Layout = ({ children, pageContext }) => {
   return (

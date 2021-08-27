@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { CheckIcon } from '@heroicons/react/outline'
 
-import { setupFeatures } from './'
+import { setupFeatures } from '.'
 
 const List = ({ sectionData }) => {
   const { features, subtitle, title, description } = sectionData

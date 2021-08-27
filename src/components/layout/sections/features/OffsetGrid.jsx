@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { setupFeatures } from './'
+import { setupFeatures } from '.'
 
 const OffsetGrid = ({ sectionData }) => {
   const { features, title } = sectionData

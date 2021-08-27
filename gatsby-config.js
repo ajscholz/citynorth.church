@@ -28,7 +28,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-layout`,
       options: {
-        component: require.resolve(`./src/layout/index.jsx`),
+        component: require.resolve(`./src/components/layout/index.jsx`),
       },
     },
     'gatsby-plugin-sitemap',

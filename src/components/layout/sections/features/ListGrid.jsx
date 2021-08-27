@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 
 import { CheckIcon } from '@heroicons/react/outline'
 
-import { setupFeatures } from './'
-import ContentfulRichText from '../../../components/ContentfulRichText'
+import { setupFeatures } from '.'
+import ContentfulRichText from '../../../ContentfulRichText'
 
 const ListGrid = ({ sectionData }) => {
   const { contentBlocks, title, body } = sectionData
