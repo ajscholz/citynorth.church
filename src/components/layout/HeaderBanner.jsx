@@ -1,6 +1,6 @@
 /* This example requires Tailwind CSS v2.0+ */
 import React from 'react'
-import { SpeakerphoneIcon, XIcon } from '@heroicons/react/outline'
+// import { SpeakerphoneIcon, XIcon } from '@heroicons/react/outline'
 
 export default function Example() {
   return (

@@ -5,14 +5,16 @@ import { BLOCKS, MARKS } from '@contentful/rich-text-types'
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
 
 const Bold = ({ children }) => <span className='bold'>{children}</span>
-const Text = ({ children }) => <p className='align-center'>{children}</p>
+const Text = ({ children }) => (
+  <React.Fragment className='align-center'>{children}</React.Fragment>
+)
 
 const options = {
   renderMark: {
     [MARKS.BOLD]: (text) => <Bold>{text}</Bold>,
   },
   renderNode: {
-    [BLOCKS.PARAGRAPH]: (node, children) => <>{children}</>,
+    [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
     [BLOCKS.EMBEDDED_ASSET]: (node) => {
       return (
         <>

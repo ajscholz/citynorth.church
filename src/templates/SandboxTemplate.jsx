@@ -3,12 +3,12 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 // import { section } from '../data/testData'
-import ListGrid from '../components/layout/sections/features/ListGrid'
-import CenteredIconGrid from '../components/layout/sections/features/CenteredIconGrid'
-import List from '../components/layout/sections/features/List'
-import OffsetGrid from '../components/layout/sections/features/OffsetGrid'
-import ThreeColSimple from '../components/layout/sections/features/ThreeColSimple'
-import BrandGrid from '../components/layout/sections/features/BrandGrid'
+// import ListGrid from '../components/layout/sections/features/ListGrid'
+// import CenteredIconGrid from '../components/layout/sections/features/CenteredIconGrid'
+// import List from '../components/layout/sections/features/List'
+// import OffsetGrid from '../components/layout/sections/features/OffsetGrid'
+// import ThreeColSimple from '../components/layout/sections/features/ThreeColSimple'
+// import BrandGrid from '../components/layout/sections/features/BrandGrid'
 
 import { sections } from '../data/testData'
 import GridOffsetIcons from '../components/layout/sections/features/GridOffsetIcons'
@@ -33,10 +33,10 @@ const SandboxPage = ({ data }) => {
   // ) : null
 
   return (
-    <div>
+    <>
       <h1 className='text-4xl font-bold'>{page.title}</h1>
       <GridOffsetIcons sectionData={sections[0]} />
-    </div>
+    </>
   )
 }
 
