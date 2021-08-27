@@ -15,7 +15,7 @@ const Footer = () => {
             <div key={link.text} className='px-5 py-2'>
               <Link
                 to={link.to}
-                className='text-base text-gray-100 hover:text-gray-3  00'
+                className='text-base text-gray-100 hover:text-gray-300'
               >
                 {link.text}
               </Link>
