@@ -10,6 +10,9 @@ import OffsetGrid from '../components/layout/sections/features/OffsetGrid'
 import ThreeColSimple from '../components/layout/sections/features/ThreeColSimple'
 import BrandGrid from '../components/layout/sections/features/BrandGrid'
 
+import { sections } from '../data/testData'
+import GridOffsetIcons from '../components/layout/sections/features/GridOffsetIcons'
+
 const SandboxPage = ({ data }) => {
   const { page } = data
 
@@ -32,6 +35,7 @@ const SandboxPage = ({ data }) => {
   return (
     <div>
       <h1 className='text-4xl font-bold'>{page.title}</h1>
+      <GridOffsetIcons sectionData={sections[0]} />
     </div>
   )
 }
