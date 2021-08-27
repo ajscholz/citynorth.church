@@ -29,7 +29,7 @@ exports.createPages = async function ({ actions, graphql }) {
       slug === '/'
         ? {
             component: require.resolve('./src/templates/IndexPage.jsx'),
-            context: { slug: slug, layout: 'index' },
+            context: { slug: slug, layout: 'standard' },
           }
         : slug === '/sandbox'
         ? {
