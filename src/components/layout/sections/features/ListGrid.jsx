@@ -8,7 +8,6 @@ import ContentfulRichText from '../../../ContentfulRichText'
 
 const ListGrid = ({ sectionData }) => {
   const { contentBlocks, title, body } = sectionData
-  // copy features, otherwise it changes the array in other components
   const sectionFeatures = setupFeatures(contentBlocks, 8)
 
   return (

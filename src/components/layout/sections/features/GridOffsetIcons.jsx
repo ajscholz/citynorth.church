@@ -1,6 +1,8 @@
 import React from 'react'
 
 import { setupFeatures } from '.'
+import ContentfulRichText from '../../../ContentfulRichText'
+import Heroicon from '../../../Heroicon'
 
 const GridOffsetIcons = ({ sectionData }) => {
   const { title, subtitle, body, contentBlocks } = sectionData
@@ -16,7 +18,7 @@ const GridOffsetIcons = ({ sectionData }) => {
           {title}
         </h2>
         <p className='mt-5 max-w-prose mx-auto text-xl text-gray-500'>
-          {body.raw}
+          <ContentfulRichText rawRichText={body} />
         </p>
         <div className='mt-12'>
           <div className='grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3'>
@@ -26,8 +28,9 @@ const GridOffsetIcons = ({ sectionData }) => {
                   <div className='-mt-6'>
                     <div>
                       <span className='inline-flex items-center justify-center p-3 bg-blue-500 rounded-md shadow-lg'>
-                        <block.icon
-                          className='h-6 w-6 text-white'
+                        <Heroicon
+                          icon={block.icon}
+                          className='h-6 w-6 text-blue-50'
                           aria-hidden='true'
                         />
                       </span>
@@ -36,7 +39,7 @@ const GridOffsetIcons = ({ sectionData }) => {
                       {block.primaryText}
                     </h3>
                     <p className='mt-5 text-base text-gray-500'>
-                      {block.body.raw}
+                      <ContentfulRichText rawRichText={block.body} />
                     </p>
                   </div>
                 </div>

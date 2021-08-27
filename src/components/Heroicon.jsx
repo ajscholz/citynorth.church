@@ -10,7 +10,9 @@ const Heroicon = ({ icon, ...props }) => {
     <icons.ArrowCircleRightIcon {...props} />
   ) : icon === 'clipboard' ? (
     <icons.ClipboardIcon {...props} />
-  ) : null
+  ) : (
+    <icons.QuestionMarkCircleIcon {...props} />
+  )
 }
 
 Heroicon.propTypes = {

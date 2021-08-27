@@ -15,14 +15,14 @@ export const sections = [
       appearance: 'List Grid',
     },
     body: {
-      raw: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate eum facere pariatur sunt deleniti quidem!',
+      raw: '{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate eum facere pariatur sunt deleniti quidem!","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}',
     },
     contentBlocks: [
       {
         id: 'wehfwndnqw',
         primaryText: 'Competitive exchange rates',
         body: {
-          raw: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+          raw: '{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate eum facere pariatur sunt deleniti quidem!","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}',
         },
         icon: GlobeAltIcon,
       },
@@ -30,7 +30,7 @@ export const sections = [
         id: '324890yhewf',
         primaryText: 'No hidden fees',
         body: {
-          raw: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+          raw: '{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}',
         },
         icon: ScaleIcon,
       },
@@ -38,7 +38,7 @@ export const sections = [
         id: 'mfgk023msd',
         primaryText: 'Transfers are instant',
         body: {
-          raw: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+          raw: '{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}',
         },
         icon: LightningBoltIcon,
       },
@@ -46,7 +46,7 @@ export const sections = [
         id: 'p12jfsd821j1',
         primaryText: 'Mobile notifications',
         body: {
-          raw: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+          raw: '{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}',
         },
         icon: AnnotationIcon,
       },
@@ -54,15 +54,15 @@ export const sections = [
         id: '893nnsdjdjdjh2',
         primaryText: 'Boards',
         body: {
-          raw: 'Interdum quam pulvinar turpis tortor, egestas quis diam amet, natoque. Mauris sagittis.',
+          raw: '{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}',
         },
         icon: CheckIcon,
       },
       {
         id: 'j1j3j6bwf567dh',
-        name: 'Keyboard shortcuts',
+        primaryText: 'Keyboard shortcuts',
         body: {
-          raw: 'Ullamcorper in ipsum ac feugiat. Senectus at aliquam vulputate mollis nec. In at risus odio.',
+          raw: '{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}',
         },
         icon: CheckIcon,
       },
@@ -70,7 +70,7 @@ export const sections = [
         id: '102938947jsk',
         primaryText: 'Reporting',
         body: {
-          raw: 'Magna a vel sagittis aliquam eu amet. Et lorem auctor quam nunc odio. Sed bibendum.',
+          raw: '{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}',
         },
         icon: CheckIcon,
       },
@@ -78,7 +78,7 @@ export const sections = [
         id: 'zlsjk193d91k',
         primaryText: 'Calendars',
         body: {
-          raw: 'Sed mi, dapibus turpis orci posuere integer. A porta viverra posuere adipiscing turpis.',
+          raw: '{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}',
         },
         icon: CheckIcon,
       },
@@ -86,7 +86,7 @@ export const sections = [
         id: 'alquwef39d9j1',
         primaryText: 'Mobile app',
         body: {
-          raw: 'Quisque sapien nunc nisl eros. Facilisis sagittis maecenas id dignissim tristique proin sed.',
+          raw: '{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}',
         },
         icon: CheckIcon,
       },

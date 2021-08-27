@@ -2,10 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import { setupFeatures } from '.'
+import ContentfulRichText from '../../../ContentfulRichText'
+import Heroicon from '../../../Heroicon'
 
 const BrandGrid = ({ sectionData }) => {
-  const { features, title, description } = sectionData
-  const sectionFeatures = setupFeatures(features, 8)
+  const { contentBlocks, title, body } = sectionData
+  const sectionFeatures = setupFeatures(contentBlocks, 8)
 
   return (
     <div className='bg-blue-800'>
@@ -13,14 +15,17 @@ const BrandGrid = ({ sectionData }) => {
         <h2 className='text-3xl font-extrabold text-blue-50 tracking-tight'>
           {title}
         </h2>
-        <p className='mt-4 max-w-3xl text-lg text-blue-200'>{description}</p>
+        <p className='mt-4 max-w-3xl text-lg text-blue-200'>
+          <ContentfulRichText rawRichText={body} />
+        </p>
         <div className='mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-16'>
           {sectionFeatures.map((feature) => (
             <div key={feature.name}>
               <div>
                 <span className='flex items-center justify-center h-12 w-12 rounded-md bg-white bg-opacity-10'>
-                  <feature.icon
-                    className='h-6 w-6 text-white'
+                  <Heroicon
+                    icon={feature.icon}
+                    className='h-6 w-6 text-blue-50'
                     aria-hidden='true'
                   />
                 </span>
@@ -30,7 +35,7 @@ const BrandGrid = ({ sectionData }) => {
                   {feature.name}
                 </h3>
                 <p className='mt-2 text-base text-blue-200'>
-                  {feature.description}
+                  <ContentfulRichText rawRichText={feature.body} />
                 </p>
               </div>
             </div>
