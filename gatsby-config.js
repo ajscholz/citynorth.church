@@ -30,10 +30,7 @@ module.exports = {
   plugins: [
     {
       resolve: 'gatsby-source-contentful',
-      options: {
-        accessToken: 'ZdJAj6bTTfsC3TCBFY0VSkFoaCTBEfL_E5WrLFZUUS0',
-        spaceId: 'hiqf9clqtwll',
-      },
+      options: contentfulConfig,
     },
     'gatsby-plugin-gatsby-cloud',
     'gatsby-plugin-image',
