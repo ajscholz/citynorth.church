@@ -5,16 +5,18 @@ import FocalPointImage from '../FocalPointImage'
 
 const Header = ({ bannerQueryData }) => {
   const { primaryText, images } = bannerQueryData
-  const image = images[0]
+  const image = images ? images[0] : null
 
   return (
     <div className='relative bg-gray-800'>
       <div className='absolute inset-0'>
-        <FocalPointImage
-          imageData={image}
-          imgClassName='w-full h-full'
-          className='absolute inset-0 h-full'
-        />
+        {images && (
+          <FocalPointImage
+            imageData={image}
+            imgClassName='w-full h-full'
+            className='absolute inset-0 h-full'
+          />
+        )}
 
         <div
           className='absolute inset-0 bg-gray-500 mix-blend-multiply'

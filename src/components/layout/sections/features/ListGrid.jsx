@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 
 import { CheckIcon } from '@heroicons/react/outline'
 
@@ -42,17 +42,17 @@ const ListGrid = ({ sectionData }) => {
   )
 }
 
-ListGrid.propTypes = {
-  sectionData: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    body: PropTypes.any.isRequired,
-    contentBlocks: PropTypes.arrayOf(
-      PropTypes.shape({
-        primaryText: PropTypes.string.isRequired,
-        body: PropTypes.any.isRequied,
-      }).isRequired
-    ).isRequired,
-  }).isRequired,
-}
+// ListGrid.propTypes = {
+//   sectionData: PropTypes.shape({
+//     title: PropTypes.string.isRequired,
+//     body: PropTypes.any.isRequired,
+//     contentBlocks: PropTypes.arrayOf(
+//       PropTypes.shape({
+//         primaryText: PropTypes.string.isRequired,
+//         body: PropTypes.any.isRequied,
+//       }).isRequired
+//     ).isRequired,
+//   }).isRequired,
+// }
 
 export default ListGrid
