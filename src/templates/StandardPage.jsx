@@ -2,14 +2,16 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import { graphql } from 'gatsby'
+import Header from '../components/layout/Header'
 
 const StandardPage = ({ data }) => {
   const { page } = data
+  const { banner } = page
 
   return (
-    <div>
-      <h1>{page.title}</h1>
-    </div>
+    <>
+      <Header bannerQueryData={banner} />
+    </>
   )
 }
 
@@ -22,7 +24,9 @@ export default StandardPage
 export const query = graphql`
   query ($slug: String!) {
     page: contentfulPage(slug: { eq: $slug }) {
-      title
+      banner {
+        ...bannerFragment
+      }
     }
   }
 `

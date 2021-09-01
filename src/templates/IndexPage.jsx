@@ -6,8 +6,9 @@ import { graphql } from 'gatsby'
 
 const IndexPageTemplate = ({ data }) => {
   const { page } = data
+  const { banner } = page
 
-  return <IndexHero banner={page.banner} />
+  return <IndexHero bannerQueryData={banner} />
 }
 
 export default IndexPageTemplate
@@ -15,12 +16,8 @@ export default IndexPageTemplate
 export const query = graphql`
   query ($slug: String!) {
     page: contentfulPage(slug: { eq: $slug }) {
-      title
       banner {
-        image {
-          gatsbyImageData
-        }
-        heroText
+        ...bannerFragment
       }
     }
   }
