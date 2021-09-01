@@ -1,5 +1,7 @@
 /* This example requires Tailwind CSS v2.0+ */
 import React from 'react'
+import { graphql } from 'gatsby'
+
 import FocalPointImage from '../FocalPointImage'
 
 const IndexHero = ({ bannerQueryData }) => {
