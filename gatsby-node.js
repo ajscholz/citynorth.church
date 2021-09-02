@@ -31,11 +31,6 @@ exports.createPages = async function ({ actions, graphql }) {
             component: require.resolve('./src/templates/IndexPage.jsx'),
             context: { slug: slug, layout: 'standard' },
           }
-        : slug === '/sandbox'
-        ? {
-            component: require.resolve('./src/templates/SandboxTemplate.jsx'),
-            context: { slug: slug, layout: 'standard' },
-          }
         : {
             component: require.resolve('./src/templates/StandardPage.jsx'),
             context: { slug: slug, layout: 'standard' },

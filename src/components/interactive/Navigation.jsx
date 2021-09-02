@@ -4,7 +4,7 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import Link from './Link'
 import { Fragment } from 'react'
 
-import { navLinks } from '../../utilies/navLinks'
+import { navLinks } from '../../utils/navLinks'
 import { StaticImage } from 'gatsby-plugin-image'
 
 const Navigation = () => {

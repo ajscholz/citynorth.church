@@ -5,7 +5,6 @@ export const navLinks = [
   { text: 'Connect', to: '/connect' },
   { text: 'Visit', to: '/visit' },
   { text: 'Messages', to: '/messages' },
-  { text: 'Sandbox', to: '/sandbox' },
 ]
 
 export const socialLinks = [

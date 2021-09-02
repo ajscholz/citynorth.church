@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { navLinks, socialLinks } from '../../utilies/navLinks'
+import { navLinks, socialLinks } from '../../utils/navLinks'
 import Link from '../interactive/Link'
 
 const Footer = () => {

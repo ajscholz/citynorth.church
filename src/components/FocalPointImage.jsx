@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import { graphql } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
-import { getFocalPoint } from '../utilies/functions'
+import { getFocalPoint } from '../utils/functions'
 
 const FocalPointImage = ({ imageData, ...rest }) => {
   const { title, description, focalPoint, image } = imageData
