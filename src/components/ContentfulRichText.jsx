@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 import { BLOCKS, MARKS } from '@contentful/rich-text-types'
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
@@ -28,10 +27,6 @@ const options = {
 
 const ContentfulRichText = ({ rawRichText }) => {
   return renderRichText(rawRichText, options)
-}
-
-ContentfulRichText.propTypes = {
-  rawRichText: PropTypes.shape({ raw: PropTypes.object.isRequired }).isRequired,
 }
 
 export default ContentfulRichText

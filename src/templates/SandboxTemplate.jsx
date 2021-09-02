@@ -12,7 +12,7 @@ const SandboxPage = ({ data }) => {
     const { type } = section.sectionTypeAppearance
 
     return type === 'Features' ? (
-      <Features section={section} />
+      <Features section={section} key={section.id} />
     ) : (
       <div className='p-8 w-full bg-red-500 text-white text-center text-2xl'>
         Content type not set up yet
@@ -24,7 +24,7 @@ const SandboxPage = ({ data }) => {
     <>
       <Header bannerQueryData={banner} />
       {sectionMap.map((section) => (
-        <section key={section.id}>{section}</section>
+        <section key={section.key}>{section}</section>
       ))}
     </>
   )

@@ -9,7 +9,7 @@ import ThreeColSimple from './ThreeColSimple'
 import BrandGrid from './BrandGrid'
 import GridOffsetIcons from './GridOffsetIcons'
 
-const FEATURE_APPEARANCES = {
+export const FEATURE_APPEARANCES = {
   'List Grid': (data) => <ListGrid sectionData={data} />,
   'Centered Icon Grid': (data) => <CenteredIconGrid sectionData={data} />,
   List: (data) => <List sectionData={data} />,
@@ -27,7 +27,7 @@ const Features = ({ section }) => {
 }
 
 Features.propTypes = {
-  data: PropTypes.object.isRequired,
+  section: PropTypes.object.isRequired,
 }
 
 export default Features
