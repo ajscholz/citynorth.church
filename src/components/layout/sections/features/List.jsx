@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { CheckIcon } from '@heroicons/react/outline'
 
 import { setupFeatures } from '.'
@@ -47,20 +46,6 @@ const List = ({ sectionData }) => {
       </div>
     </div>
   )
-}
-
-List.propTypes = {
-  sectionData: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    subtitle: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    features: PropTypes.arrayOf(
-      PropTypes.shape({
-        name: PropTypes.string.isRequired,
-        description: PropTypes.string.isRequied,
-      }).isRequired
-    ).isRequired,
-  }).isRequired,
 }
 
 export default List

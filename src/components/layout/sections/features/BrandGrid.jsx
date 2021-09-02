@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 import { setupFeatures } from '.'
 import ContentfulRichText from '../../../ContentfulRichText'
@@ -44,19 +43,6 @@ const BrandGrid = ({ sectionData }) => {
       </div>
     </div>
   )
-}
-
-BrandGrid.propTypes = {
-  sectionData: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    features: PropTypes.arrayOf(
-      PropTypes.shape({
-        name: PropTypes.string.isRequired,
-        description: PropTypes.string.isRequied,
-      }).isRequired
-    ).isRequired,
-  }).isRequired,
 }
 
 export default BrandGrid

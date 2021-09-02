@@ -12,7 +12,7 @@ const SandboxPage = ({ data }) => {
     const { type } = section.sectionTypeAppearance
 
     return type === 'Features' ? (
-      <Features data={section} />
+      <Features section={section} />
     ) : (
       <div className='p-8 w-full bg-red-500 text-white text-center text-2xl'>
         Content type not set up yet
