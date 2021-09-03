@@ -17,9 +17,7 @@ const types = [
 
 const DesignPage = ({ data }) => {
   const [selected, setSelected] = useState(types[0])
-  const { faqs, features } = data
-  const { featuresSection } = features.edges[0]
-  const { faqSection } = faqs.edges[0]
+  const { featuresSection, faqSection } = data
 
   return (
     <>
@@ -110,60 +108,52 @@ const DesignPage = ({ data }) => {
 export default DesignPage
 
 export const query = graphql`
-  query allSectionQuery {
-    faqs: allContentfulSection(
-      filter: { sectionTypeAppearance: { section: { eq: "FAQ" } } }
+  query myQuery {
+    featuresSection: contentfulSection(
+      contentful_id: { eq: "6IU2yYAkUQ0e1wf1cziimn" }
     ) {
-      edges {
-        faqSection: node {
-          id: contentful_id
-          name
-          title
-          subtitle
-          body {
-            raw
-          }
-          sectionTypeAppearance {
-            section
-            appearance
-          }
-          contentBlocks {
-            id: contentful_id
-            name
-            primaryText
-            secondaryText
-            body {
-              raw
-            }
-          }
+      id: contentful_id
+      name
+      title
+      subtitle
+      body {
+        raw
+      }
+      sectionTypeAppearance {
+        section
+        appearance
+      }
+      contentBlocks {
+        id: contentful_id
+        name
+        primaryText
+        secondaryText
+        body {
+          raw
         }
       }
     }
-    features: allContentfulSection(
-      filter: { sectionTypeAppearance: { section: { eq: "Features" } } }
+    faqSection: contentfulSection(
+      contentful_id: { eq: "4Y2UOLcFzFdDRociiR9iAg" }
     ) {
-      edges {
-        featuresSection: node {
-          id: contentful_id
-          name
-          title
-          subtitle
-          body {
-            raw
-          }
-          sectionTypeAppearance {
-            section
-            appearance
-          }
-          contentBlocks {
-            id: contentful_id
-            name
-            primaryText
-            secondaryText
-            body {
-              raw
-            }
-          }
+      id: contentful_id
+      name
+      title
+      subtitle
+      body {
+        raw
+      }
+      sectionTypeAppearance {
+        section
+        appearance
+      }
+      contentBlocks {
+        id: contentful_id
+        name
+        primaryText
+        secondaryText
+        body {
+          raw
         }
       }
     }
