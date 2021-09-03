@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 
 import { ExclamationIcon } from '@heroicons/react/solid'
 
+import { combineClassNames } from '../../utils/functions'
+
 const useRefDimensions = (ref) => {
   const [width, setWidth] = useState(0)
   useEffect(() => {
@@ -22,7 +24,7 @@ const useRefDimensions = (ref) => {
   return width
 }
 
-const ContentWarning = ({ id, fieldName, contentName, message }) => {
+const ContentWarning = ({ id, fieldName, contentName, message, className }) => {
   const ref = useRef()
   const [show, setShow] = useState(false)
   const width = useRefDimensions(ref)
@@ -35,7 +37,13 @@ const ContentWarning = ({ id, fieldName, contentName, message }) => {
 
   return show ? (
     <>
-      <div className='bg-yellow-50 border-l-4 border-yellow-400 p-4' ref={ref}>
+      <div
+        className={combineClassNames(
+          'bg-yellow-50 border-l-4 border-yellow-400 p-4',
+          className
+        )}
+        ref={ref}
+      >
         <div className='flex'>
           <div className='flex-shrink-0'>
             <ExclamationIcon

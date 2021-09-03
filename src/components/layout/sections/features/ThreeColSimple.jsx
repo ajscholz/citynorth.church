@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import { setupFeatures } from '.'
 import ContentfulRichText from '../../../ContentfulRichText'
 import Heroicon from '../../../Heroicon'
+import ContentWarning from '../../../interactive/ContentWarning'
 
 const ThreeColSimple = ({ sectionData }) => {
   const { contentBlocks, title } = sectionData
@@ -28,9 +29,17 @@ const ThreeColSimple = ({ sectionData }) => {
                   {feature.name}
                 </p>
               </dt>
-              <dd className='mt-2 text-base text-gray-500'>
-                <ContentfulRichText rawRichText={feature.body} />
-              </dd>
+              {feature.body ? (
+                <dd className='mt-2 text-base text-gray-500'>
+                  <ContentfulRichText rawRichText={feature.body} />
+                </dd>
+              ) : (
+                <ContentWarning
+                  id={feature.id}
+                  contentName={feature.name}
+                  fieldName='BODY'
+                />
+              )}
             </div>
           ))}
         </dl>

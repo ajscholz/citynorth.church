@@ -18,9 +18,9 @@ const types = [
 const DesignPage = ({ data }) => {
   const [selected, setSelected] = useState(types[0])
   const { faqs, features } = data
-  const { section } = features.edges[0]
+  const { featuresSection } = features.edges[0]
+  const { faqSection } = faqs.edges[0]
 
-  console.log('selected', selected)
   return (
     <>
       <SEO index={false} />
@@ -38,51 +38,46 @@ const DesignPage = ({ data }) => {
         <>
           <Features
             section={{
-              ...section,
-              sectionTypeAppearance: { appearance: 'List Grid' },
+              ...featuresSection,
+              sectionTypeAppearance: { appearance: 'List' },
             }}
           />
           <Features
             section={{
-              ...section,
-              sectionTypeAppearance: { appearance: 'List' },
+              ...featuresSection,
+              sectionTypeAppearance: { appearance: 'Grid With Offset Icons' },
             }}
           />
-
-          {/* <Features
-        section={{
-          ...section,
-          sectionTypeAppearance: { appearance: 'Centered Icon Grid' },
-        }}
-        />
-        
-        <Features
-        section={{
-          ...section,
-          sectionTypeAppearance: { appearance: 'Offset Grid' },
-        }}
-        />
-        
-        <Features
-        section={{
-          ...section,
-          sectionTypeAppearance: { appearance: 'Simple Three Column' },
-        }}
-        />
-        
-        <Features
-        section={{
-          ...section,
-          sectionTypeAppearance: { appearance: 'Brand Color Grid' },
-        }}
-        />
-        
-        <Features
-        section={{
-          ...section,
-          sectionTypeAppearance: { appearance: 'Grid With Offset Icons' },
-        }}
-      />  */}
+          <Features
+            section={{
+              ...featuresSection,
+              sectionTypeAppearance: { appearance: 'Brand Color Grid' },
+            }}
+          />
+          <Features
+            section={{
+              ...featuresSection,
+              sectionTypeAppearance: { appearance: 'Simple Three Column' },
+            }}
+          />
+          <Features
+            section={{
+              ...featuresSection,
+              sectionTypeAppearance: { appearance: 'Offset Grid' },
+            }}
+          />
+          <Features
+            section={{
+              ...featuresSection,
+              sectionTypeAppearance: { appearance: 'Centered Icon Grid' },
+            }}
+          />
+          <Features
+            section={{
+              ...featuresSection,
+              sectionTypeAppearance: { appearance: 'List Grid' },
+            }}
+          />
         </>
       )}
 
@@ -90,19 +85,19 @@ const DesignPage = ({ data }) => {
         <>
           <FaqSection
             section={{
-              ...section,
+              ...faqSection,
               sectionTypeAppearance: { appearance: 'Centered' },
             }}
           />
           <FaqSection
             section={{
-              ...section,
+              ...faqSection,
               sectionTypeAppearance: { appearance: 'Offset' },
             }}
           />
           <FaqSection
             section={{
-              ...section,
+              ...faqSection,
               sectionTypeAppearance: { appearance: 'Two Column' },
             }}
           />
@@ -120,7 +115,7 @@ export const query = graphql`
       filter: { sectionTypeAppearance: { section: { eq: "FAQ" } } }
     ) {
       edges {
-        section: node {
+        faqSection: node {
           id: contentful_id
           name
           title
@@ -148,7 +143,7 @@ export const query = graphql`
       filter: { sectionTypeAppearance: { section: { eq: "Features" } } }
     ) {
       edges {
-        section: node {
+        featuresSection: node {
           id: contentful_id
           name
           title

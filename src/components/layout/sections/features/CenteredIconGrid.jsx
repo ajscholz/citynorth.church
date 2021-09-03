@@ -1,9 +1,9 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 import { setupFeatures } from '.'
 import Heroicon from '../../../Heroicon'
 import ContentfulRichText from '../../../ContentfulRichText'
+import ContentWarning from '../../../interactive/ContentWarning'
 
 const CenteredIconGrid = ({ sectionData }) => {
   const { contentBlocks, title, subtitle, body } = sectionData
@@ -13,15 +13,19 @@ const CenteredIconGrid = ({ sectionData }) => {
     <div className='py-12 bg-white'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='lg:text-center'>
-          <p className='text-base text-blue-600 font-semibold tracking-wide uppercase'>
-            {subtitle}
-          </p>
+          {subtitle && (
+            <p className='text-base text-blue-600 font-semibold tracking-wide uppercase'>
+              {subtitle}
+            </p>
+          )}
           <h2 className='mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl'>
             {title}
           </h2>
-          <p className='mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto'>
-            <ContentfulRichText rawRichText={body} />
-          </p>
+          {body && (
+            <p className='mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto'>
+              <ContentfulRichText rawRichText={body} />
+            </p>
+          )}
         </div>
 
         <div className='mt-10'>
@@ -40,9 +44,18 @@ const CenteredIconGrid = ({ sectionData }) => {
                     {feature.primaryText}
                   </p>
                 </dt>
-                <dd className='mt-2 ml-16 text-base text-gray-500'>
-                  <ContentfulRichText rawRichText={feature.body} />
-                </dd>
+                {feature.body ? (
+                  <dd className='mt-2 ml-16 text-base text-gray-500'>
+                    <ContentfulRichText rawRichText={feature.body} />
+                  </dd>
+                ) : (
+                  <ContentWarning
+                    id={feature.id}
+                    fieldName='BODY'
+                    contentName={feature.name}
+                    className='mt-2 ml-16'
+                  />
+                )}
               </div>
             ))}
           </dl>
@@ -50,21 +63,6 @@ const CenteredIconGrid = ({ sectionData }) => {
       </div>
     </div>
   )
-}
-
-CenteredIconGrid.propTypes = {
-  sectionData: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    subtitle: PropTypes.string.isRequired,
-    body: PropTypes.any.isRequired,
-    contentBlocks: PropTypes.arrayOf(
-      PropTypes.shape({
-        primaryText: PropTypes.string.isRequired,
-        body: PropTypes.any.isRequied,
-        icon: PropTypes.func.isRequired,
-      }).isRequired
-    ).isRequired,
-  }).isRequired,
 }
 
 export default CenteredIconGrid
