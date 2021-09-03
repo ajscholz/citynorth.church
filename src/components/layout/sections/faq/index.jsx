@@ -5,8 +5,6 @@ import CenteredFAQ from './CenteredFAQ'
 import OffsetFAQ from './OffsetFAQ'
 import TwoColFAQ from './TwoColFAQ'
 
-const Component = () => null
-
 export const FAQ_APPEARANCES = {
   Centered: (data) => <CenteredFAQ sectionData={data} />,
   Offset: (data) => <OffsetFAQ sectionData={data} />,
