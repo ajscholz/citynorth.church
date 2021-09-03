@@ -22,11 +22,18 @@ const useRefDimensions = (ref) => {
   return width
 }
 
-const ContentWarning = ({ id, fieldName, contentName }) => {
+const ContentWarning = ({ id, fieldName, contentName, message }) => {
   const ref = useRef()
+  const [show, setShow] = useState(false)
   const width = useRefDimensions(ref)
 
-  return (
+  // only display warnings if in development or in preview mode
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'development' || process.env.GATSBY_IS_PREVIEW)
+      setShow(true)
+  }, [])
+
+  return show ? (
     <>
       <div className='bg-yellow-50 border-l-4 border-yellow-400 p-4' ref={ref}>
         <div className='flex'>
@@ -40,7 +47,7 @@ const ContentWarning = ({ id, fieldName, contentName }) => {
             className={`ml-3 flex-1 ${width >= 660 && 'flex justify-between'}`}
           >
             <p className='text-sm text-yellow-700'>
-              {`Please complete the `}
+              {message.trim().concat(' ')}
               <span className='font-bold'>{fieldName}</span>
               {` field in
               `}
@@ -60,13 +67,18 @@ const ContentWarning = ({ id, fieldName, contentName }) => {
         </div>
       </div>
     </>
-  )
+  ) : null
 }
 
 ContentWarning.propTypes = {
   id: PropTypes.string.isRequired,
   contentName: PropTypes.string.isRequired,
   fieldName: PropTypes.string.isRequired,
+  message: PropTypes.string.isRequired,
+}
+
+ContentWarning.defaultProps = {
+  message: 'Please complete the',
 }
 
 export default ContentWarning
