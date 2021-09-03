@@ -1,3 +1,15 @@
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+  const typeDefs = `
+    type ContentfulSection implements Node {
+      name: String
+      title: String
+      subtitle: String
+    }
+  `
+  createTypes(typeDefs)
+}
+
 exports.onCreatePage = ({ page, actions }) => {
   const { createPage } = actions
 
