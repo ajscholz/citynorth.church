@@ -16,7 +16,7 @@ if (process.env.CONTENTFUL_HOST) {
 
 const { spaceId, accessToken } = contentfulConfig
 
-if (!spaceId || !accessToken) {
+if (process.env.NODE_ENV && (!spaceId || !accessToken)) {
   throw new Error(
     'Contentful spaceId and the access token need to be provided.'
   )
