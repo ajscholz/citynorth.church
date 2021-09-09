@@ -3,11 +3,8 @@ import React, { useState } from 'react'
 import { Disclosure } from '@headlessui/react'
 
 import SEO from '../components/SEO'
-import Features, {
-  FEATURE_APPEARANCES,
-} from '../components/layout/sections/features'
-import Select from '../components/interactive/Select'
-import FaqSection, { FAQ_APPEARANCES } from '../components/layout/sections/faq'
+import { FEATURE_APPEARANCES } from '../components/layout/sections/features'
+import { FAQ_APPEARANCES } from '../components/layout/sections/faq'
 import { CTA_APPEARANCES } from '../components/layout/sections/callToAction'
 import { HEADER_APPEARANCES } from '../components/layout/sections/header'
 import { STORY_APPEARANCES } from '../components/layout/sections/story'
