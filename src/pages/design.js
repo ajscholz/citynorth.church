@@ -16,7 +16,7 @@ import { TEAM_APPEARANCES } from '../components/layout/sections/team'
 import { combineClassNames } from '../utils/functions'
 
 const types = {
-  Features: { appearances: FEATURE_APPEARANCES, current: true },
+  Features: { appearances: FEATURE_APPEARANCES, current: false },
   FAQ: { appearances: FAQ_APPEARANCES, current: false },
   'Call To Action': { appearances: CTA_APPEARANCES, current: false },
   Header: { appearances: HEADER_APPEARANCES, current: false },
@@ -25,11 +25,19 @@ const types = {
 }
 
 const Design = () => {
-  const [look, setLook] = useState(null)
+  const [state, setState] = useState({
+    look: null,
+    selected: { type: null, appearance: null },
+  })
 
-  const handleUpdate = (component, appearance) => {
-    console.log('appearance', appearance)
-    setLook(component({ ...defaultFeaturesData }))
+  const handleUpdate = (component, type, appearance) => {
+    setState({
+      look: component({
+        ...defaultFeaturesData,
+        title: `${appearance} Section`,
+      }),
+      selected: { type: type, appearance: appearance },
+    })
   }
 
   return (
@@ -53,10 +61,10 @@ const Design = () => {
         </header>
 
         <div className='flex flex-grow min-h-full'>
-          <div className='flex flex-col flex-none border-r border-gray-200 w-64 pt-5 pb-4 bg-white overflow-y-auto'>
+          <div className='flex flex-col flex-none w-64 pt-5 pb-4 bg-blue-500 overflow-y-auto'>
             <div className='flex-grow flex flex-col'>
               <nav
-                className='flex-1 px-2 space-y-1 bg-white'
+                className='flex-1 px-2 space-y-1 bg-blue-500'
                 aria-label='Sidebar'
               >
                 {Object.keys(types).map((type) => {
@@ -69,17 +77,15 @@ const Design = () => {
                           <Disclosure.Button
                             className={combineClassNames(
                               item.current
-                                ? 'bg-gray-100 text-gray-900'
-                                : 'bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900',
-                              'group w-full flex items-center pr-2 py-2 text-left text-sm font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
+                                ? 'bg-blue-700 text-blue-50'
+                                : 'bg-blue-500 text-blue-50 hover:bg-blue-400 hover:text-white',
+                              'group w-full flex items-center pr-2 py-2 text-left text-md font-semibold rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
                             )}
                           >
                             <svg
                               className={combineClassNames(
-                                open
-                                  ? 'text-gray-400 rotate-90'
-                                  : 'text-gray-300',
-                                'mr-2 flex-shrink-0 h-5 w-5 transform group-hover:text-gray-400 transition-colors ease-in-out duration-150'
+                                open && 'rotate-90',
+                                'mr-2 flex-shrink-0 h-5 w-5 transform text-white'
                               )}
                               viewBox='0 0 20 20'
                               aria-hidden='true'
@@ -91,16 +97,22 @@ const Design = () => {
                             </svg>
                             {type}
                           </Disclosure.Button>
-                          <Disclosure.Panel className='space-y-1'>
+                          <Disclosure.Panel className='space-y-2 mb-6'>
                             {Object.keys(item.appearances).map((appearance) => {
                               const component = item.appearances[appearance]
 
                               return (
                                 <button
                                   key={appearance}
-                                  className='group w-full flex items-center pl-10 pr-2 py-2 text-sm font-medium text-gray-600 rounded-md hover:text-gray-900 hover:bg-gray-50'
+                                  className={combineClassNames(
+                                    type === state.selected.type &&
+                                      appearance === state.selected.appearance
+                                      ? 'bg-blue-700 text-blue-100'
+                                      : 'bg-blue-500 text-blue-100 hover:bg-blue-400 hover:text-blue-50',
+                                    'group w-full flex items-center pl-10 pr-2 py-2 text-sm text-left font-regular text-blue-100 rounded-md hover:text-blue-50 hover:bg-blue-400'
+                                  )}
                                   onClick={() =>
-                                    handleUpdate(component, appearance)
+                                    handleUpdate(component, type, appearance)
                                   }
                                 >
                                   {appearance}
@@ -117,7 +129,7 @@ const Design = () => {
             </div>
           </div>
 
-          <div className='flex-1 bg-gray-200'>{look}</div>
+          <div className='flex-1 bg-gray-100'>{state.look}</div>
         </div>
       </div>
     </>
@@ -130,9 +142,9 @@ const defaultFeaturesData = {
   id: '82jdls9c23k0',
   name: 'Default Section',
   title: 'Default Section',
-  subtitle: 'Default Subtitle',
+  subtitle: 'Section Subtitle',
   body: {
-    raw: '{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Will this update correctly?","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}',
+    raw: '{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Section body text. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate eum facere pariatur sunt deleniti quidem!","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}',
   },
   sectionTypeAppearance: {
     section: 'Features',
@@ -141,38 +153,82 @@ const defaultFeaturesData = {
   contentBlocks: [
     {
       id: '1qnHG0VVk23qfjvZj1b32w',
-      name: "Here's One!",
-      primaryText: 'Content Block 1',
-      secondaryText: null,
+      name: 'Content Block 1',
+      primaryText: 'Content Block Primary Text',
+      secondaryText: 'Content Block Secondary Text',
+      icon: 'academic-cap',
       body: {
-        raw: '{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","value":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate eum facere pariatur sunt deleniti quidem! And more words.","marks":[],"data":{}}],"data":{}}]}',
+        raw: '{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","value":"Content block body text. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate eum facere pariatur sunt deleniti quidem!","marks":[],"data":{}}],"data":{}}]}',
       },
     },
     {
-      id: '1qnHG0VVk23qfjvZj1b32w',
-      name: "Here's TWo!",
-      primaryText: 'Content Block 2',
-      secondaryText: null,
+      id: '324ihjwefd80s98h',
+      name: 'Content Block 2',
+      primaryText: 'Content Block Primary Text',
+      secondaryText: 'Content Block Secondary Text',
+      icon: 'academic-cap',
       body: {
-        raw: '{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","value":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate eum facere pariatur sunt deleniti quidem! And more words.","marks":[],"data":{}}],"data":{}}]}',
+        raw: '{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","value":"Content block body text. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate eum facere pariatur sunt deleniti quidem!","marks":[],"data":{}}],"data":{}}]}',
       },
     },
     {
-      id: '1qnHG0VVk23qfjvZj1b32w',
-      name: "Here's One!",
-      primaryText: 'Content Block 3',
-      secondaryText: null,
+      id: 'cvnsjidlfjkl234',
+      name: 'Content Block 3',
+      primaryText: 'Content Block Primary Text',
+      secondaryText: 'Content Block Secondary Text',
+      icon: 'academic-cap',
       body: {
-        raw: '{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","value":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate eum facere pariatur sunt deleniti quidem! And more words.","marks":[],"data":{}}],"data":{}}]}',
+        raw: '{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","value":"Content block body text. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate eum facere pariatur sunt deleniti quidem!","marks":[],"data":{}}],"data":{}}]}',
       },
     },
     {
-      id: '1qnHG0VVk23qfjvZj1b32w',
-      name: "Here's One!",
-      primaryText: 'Content Block 4',
-      secondaryText: null,
+      id: 'ihup23h098wyqh',
+      name: 'Content Block 4',
+      primaryText: 'Content Block Primary Text',
+      secondaryText: 'Content Block Secondary Text',
+      icon: 'academic-cap',
       body: {
-        raw: '{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","value":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate eum facere pariatur sunt deleniti quidem! And more words.","marks":[],"data":{}}],"data":{}}]}',
+        raw: '{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","value":"Content block body text. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate eum facere pariatur sunt deleniti quidem!","marks":[],"data":{}}],"data":{}}]}',
+      },
+    },
+    {
+      id: '2j38sdfln23jewf;m',
+      name: 'Content Block 5',
+      primaryText: 'Content Block Primary Text',
+      secondaryText: 'Content Block Secondary Text',
+      icon: 'academic-cap',
+      body: {
+        raw: '{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","value":"Content block body text. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate eum facere pariatur sunt deleniti quidem!","marks":[],"data":{}}],"data":{}}]}',
+      },
+    },
+    {
+      id: '234iuwehjnfksdm',
+      name: 'Content Block 6',
+      primaryText: 'Content Block Primary Text',
+      secondaryText: 'Content Block Secondary Text',
+      icon: 'academic-cap',
+      body: {
+        raw: '{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","value":"Content block body text. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate eum facere pariatur sunt deleniti quidem!","marks":[],"data":{}}],"data":{}}]}',
+      },
+    },
+    {
+      id: 'ilhwjsnkldfj08923y42p9wuehrf',
+      name: 'Content Block 7',
+      primaryText: 'Content Block Primary Text',
+      secondaryText: 'Content Block Secondary Text',
+      icon: 'academic-cap',
+      body: {
+        raw: '{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","value":"Content block body text. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate eum facere pariatur sunt deleniti quidem!","marks":[],"data":{}}],"data":{}}]}',
+      },
+    },
+    {
+      id: '12870894738274032',
+      name: 'Content Block 8',
+      primaryText: 'Content Block Primary Text',
+      secondaryText: 'Content Block Secondary Text',
+      icon: 'academic-cap',
+      body: {
+        raw: '{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","value":"Content block body text. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate eum facere pariatur sunt deleniti quidem!","marks":[],"data":{}}],"data":{}}]}',
       },
     },
   ],

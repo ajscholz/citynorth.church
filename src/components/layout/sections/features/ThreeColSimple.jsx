@@ -26,7 +26,7 @@ const ThreeColSimple = ({ sectionData }) => {
                   />
                 </div>
                 <p className='mt-5 text-lg leading-6 font-medium text-gray-900'>
-                  {feature.name}
+                  {feature.primaryText}
                 </p>
               </dt>
               {feature.body ? (
