@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
 
 import SEO from '../components/SEO'
@@ -6,27 +6,103 @@ import Features from '../components/layout/sections/features'
 import Select from '../components/interactive/Select'
 import FaqSection from '../components/layout/sections/faq'
 
-const types = [
-  { name: 'Features', unavailable: false },
-  { name: 'FAQ', unavailable: false },
-  { name: 'Call To Action', unavailable: true },
-  { name: 'Header', unavailable: true },
-  { name: 'Story', unavailable: true },
-  { name: 'Team', unavailable: true },
-]
+import { Tab } from '@headlessui/react'
+
+import { combineClassNames } from '../utils/functions'
+
+const types = {
+  Features: { unavailable: false },
+  FAQ: { unavailable: false },
+  'Call To Action': { unavailable: false },
+  Header: { unavailable: false },
+  Story: { unavailable: false },
+  Team: { unavailable: false },
+}
 
 const DesignPage = ({ data }) => {
-  const [selected, setSelected] = useState(types[0])
   const { featuresSection, faqSection } = data
 
   return (
-    <>
+    <div className=''>
       <SEO index={false} />
-      <div className='mx-auto mb-6 w-3/4 md:w-1/2 lg:w-1/3 py-4 px-24 text-center text-2xl text-gray-800 border-b-2 border-gray-300'>
-        Design Page
+      <header className='flex flex-col items-center bg-gray-800 w-full'>
+        <div className='mb-6 py-12 px-6 md:px-12 lg:px-24 max-w-5xl text-center text-gray-50'>
+          <h2 className='text-3xl font-bold'>Design Page</h2>
+          <p className='mt-6 text-gray-100 text-sm'>
+            Use this page to view design options available to you. Browse by
+            section type, then select a layout. You'll be able to to see what
+            that specific section appearance will look like with dummy data, and
+            you'll see different parameters for that section and appearance.
+          </p>
+        </div>
+      </header>
+
+      <div className='w-full flex flex-col items-center px-2 py-10 sm:px-0'>
+        <Tab.Group>
+          <Tab.List className='max-w-5xl flex space-x-1 sm:space-x-3 md:space-x-5 lg:space-x-8 border-b-2 border-gray-200'>
+            {Object.keys(types).map((type) => (
+              <Tab
+                key={type}
+                // disabled={type.unavailable}
+                className={({ selected }) =>
+                  combineClassNames(
+                    'py-2.5 px-2 sm:px-4 md:px-5 lg:px-6 -mb-0.5 border-b-2 border-transparent text-sm leading-5 font-medium ',
+                    'focus:outline-none',
+                    selected
+                      ? 'border-blue-600 text-blue-800'
+                      : 'text-gray-400 border-transparent hover:border-gray-400 hover:text-gray-500'
+                  )
+                }
+              >
+                {type}
+              </Tab>
+            ))}
+          </Tab.List>
+          <Tab.Panels className='w-full mt-2'>
+            {Object.keys(types).map((type, idx) => (
+              <Tab.Panel
+                key={idx}
+                className={combineClassNames(
+                  'bg-white rounded-xl p-3',
+                  'focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60'
+                )}
+              >
+                <h3 className='text-xl font-bold'>{type}</h3>
+                {/* <ul>
+                  {posts.map((post) => (
+                    <li
+                      key={post.id}
+                      className='relative p-3 rounded-md hover:bg-coolGray-100'
+                    >
+                      <h3 className='text-sm font-medium leading-5'>
+                        {post.title}
+                      </h3>
+
+                      <ul className='flex mt-1 space-x-1 text-xs font-normal leading-4 text-coolGray-500'>
+                        <li>{post.date}</li>
+                        <li>&middot;</li>
+                        <li>{post.commentCount} comments</li>
+                        <li>&middot;</li>
+                        <li>{post.shareCount} shares</li>
+                      </ul>
+
+                      <a
+                        href='#'
+                        className={classNames(
+                          'absolute inset-0 rounded-md',
+                          'focus:z-10 focus:outline-none focus:ring-2 ring-blue-400'
+                        )}
+                      />
+                    </li>
+                  ))}
+                </ul> */}
+              </Tab.Panel>
+            ))}
+          </Tab.Panels>
+        </Tab.Group>
       </div>
 
-      <div className='flex mt-12'>
+      {/* <div className='flex mt-12'>
         <div className='mx-auto'>
           <Select selected={selected} setSelected={setSelected} list={types} />
         </div>
@@ -100,8 +176,8 @@ const DesignPage = ({ data }) => {
             }}
           />
         </>
-      )}
-    </>
+      )} */}
+    </div>
   )
 }
 

@@ -1,4 +1,6 @@
-export const combineClassNames = (a, b) => a.concat(' ').concat(b)
+export const combineClassNames = (...classes) => {
+  return classes.filter(Boolean).join(' ')
+}
 
 export const getFocalPoint = (image, focalPoint) => {
   try {
