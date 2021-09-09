@@ -17,6 +17,7 @@
   "dependencies": {
     "@headlessui/react": "^1.4.0",
     "@heroicons/react": "^1.0.3",
+    "@tailwindcss/aspect-ratio": "^0.2.1",
     "gatsby": "^3.11.1",
     "gatsby-plugin-gatsby-cloud": "^2.11.0",
     "gatsby-plugin-google-analytics": "^3.11.0",

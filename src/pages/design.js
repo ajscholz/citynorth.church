@@ -157,6 +157,16 @@ const defaultFeaturesData = {
       body: {
         raw: '{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","value":"Content block body text. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate eum facere pariatur sunt deleniti quidem!","marks":[],"data":{}}],"data":{}}]}',
       },
+      callToAction: [
+        {
+          text: 'CTA Text',
+          url: 'https://citynorthchurch.gatsbyjs.io/',
+        },
+        {
+          text: 'CTA Text',
+          url: 'https://citynorthchurch.gatsbyjs.io/',
+        },
+      ],
     },
     {
       id: '324ihjwefd80s98h',
@@ -167,6 +177,16 @@ const defaultFeaturesData = {
       body: {
         raw: '{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","value":"Content block body text. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate eum facere pariatur sunt deleniti quidem!","marks":[],"data":{}}],"data":{}}]}',
       },
+      callToAction: [
+        {
+          text: 'CTA Text',
+          url: 'https://citynorthchurch.gatsbyjs.io/',
+        },
+        {
+          text: 'CTA Text',
+          url: 'https://citynorthchurch.gatsbyjs.io/',
+        },
+      ],
     },
     {
       id: 'cvnsjidlfjkl234',
@@ -177,6 +197,16 @@ const defaultFeaturesData = {
       body: {
         raw: '{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","value":"Content block body text. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate eum facere pariatur sunt deleniti quidem!","marks":[],"data":{}}],"data":{}}]}',
       },
+      callToAction: [
+        {
+          text: 'CTA Text',
+          url: 'https://citynorthchurch.gatsbyjs.io/',
+        },
+        {
+          text: 'CTA Text',
+          url: 'https://citynorthchurch.gatsbyjs.io/',
+        },
+      ],
     },
     {
       id: 'ihup23h098wyqh',
@@ -187,6 +217,16 @@ const defaultFeaturesData = {
       body: {
         raw: '{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","value":"Content block body text. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate eum facere pariatur sunt deleniti quidem!","marks":[],"data":{}}],"data":{}}]}',
       },
+      callToAction: [
+        {
+          text: 'CTA Text',
+          url: 'https://citynorthchurch.gatsbyjs.io/',
+        },
+        {
+          text: 'CTA Text',
+          url: 'https://citynorthchurch.gatsbyjs.io/',
+        },
+      ],
     },
     {
       id: '2j38sdfln23jewf;m',
@@ -197,6 +237,16 @@ const defaultFeaturesData = {
       body: {
         raw: '{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","value":"Content block body text. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate eum facere pariatur sunt deleniti quidem!","marks":[],"data":{}}],"data":{}}]}',
       },
+      callToAction: [
+        {
+          text: 'CTA Text',
+          url: 'https://citynorthchurch.gatsbyjs.io/',
+        },
+        {
+          text: 'CTA Text',
+          url: 'https://citynorthchurch.gatsbyjs.io/',
+        },
+      ],
     },
     {
       id: '234iuwehjnfksdm',
@@ -207,6 +257,16 @@ const defaultFeaturesData = {
       body: {
         raw: '{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","value":"Content block body text. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate eum facere pariatur sunt deleniti quidem!","marks":[],"data":{}}],"data":{}}]}',
       },
+      callToAction: [
+        {
+          text: 'CTA Text',
+          url: 'https://citynorthchurch.gatsbyjs.io/',
+        },
+        {
+          text: 'CTA Text',
+          url: 'https://citynorthchurch.gatsbyjs.io/',
+        },
+      ],
     },
     {
       id: 'ilhwjsnkldfj08923y42p9wuehrf',
@@ -217,6 +277,16 @@ const defaultFeaturesData = {
       body: {
         raw: '{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","value":"Content block body text. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate eum facere pariatur sunt deleniti quidem!","marks":[],"data":{}}],"data":{}}]}',
       },
+      callToAction: [
+        {
+          text: 'CTA Text',
+          url: 'https://citynorthchurch.gatsbyjs.io/',
+        },
+        {
+          text: 'CTA Text',
+          url: 'https://citynorthchurch.gatsbyjs.io/',
+        },
+      ],
     },
     {
       id: '12870894738274032',
@@ -227,6 +297,16 @@ const defaultFeaturesData = {
       body: {
         raw: '{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","value":"Content block body text. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate eum facere pariatur sunt deleniti quidem!","marks":[],"data":{}}],"data":{}}]}',
       },
+      callToAction: [
+        {
+          text: 'CTA Text',
+          url: 'https://citynorthchurch.gatsbyjs.io/',
+        },
+        {
+          text: 'CTA Text',
+          url: 'https://citynorthchurch.gatsbyjs.io/',
+        },
+      ],
     },
   ],
 }
