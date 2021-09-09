@@ -6,7 +6,7 @@ const Component = () => null
 export const TEAM_APPEARANCES = {
   'With Small Images': (data) => <Component sectionData={data} />,
   'With Vertical Images': (data) => <Component sectionData={data} />,
-  'Grid With Round Images1': (data) => <Component sectionData={data} />,
+  'Grid With Round Images': (data) => <Component sectionData={data} />,
 }
 
 const TeamSection = ({ section }) => {
