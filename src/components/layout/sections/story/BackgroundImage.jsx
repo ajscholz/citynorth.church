@@ -12,11 +12,12 @@ const BackgroundImage = ({ sectionData }) => {
         <div className='relative py-24 px-8 bg-blue-500 rounded-xl shadow-2xl overflow-hidden lg:px-16 lg:grid lg:grid-cols-2 lg:gap-x-8'>
           <GatsbyImage
             image={image.gatsbyImageData}
-            className='absolute inset-0 opacity-50 filter saturate-0 mix-blend-multiply'
-            imgClassName='w-full h-full object-cover'
+            className='absolute inset-0 opacity-100 filter saturate-0 '
+            imgClassName='w-full h-full'
             style={{ position: 'absolute' }}
             alt={image.description}
           />
+          <div className='absolute inset-0 bg-blue-500 mix-blend-multiply' />
           <div className='relative lg:col-span-1'>
             <blockquote className='mt-6 text-white'>
               <p className='text-xl font-medium sm:text-2xl'>

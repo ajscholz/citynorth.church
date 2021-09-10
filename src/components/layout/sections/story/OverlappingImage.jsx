@@ -19,6 +19,7 @@ const OverlappingImage = ({ sectionData }) => {
             <div className='mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:p-0 lg:h-full'>
               <GatsbyImage
                 image={image.gatsbyImageData}
+                style={{ display: 'block' }}
                 className='aspect-w-10 aspect-h-6 rounded-xl shadow-xl overflow-hidden sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full'
                 imgClassName='object-cover lg:h-full lg:w-full'
                 alt={image.description}
@@ -45,7 +46,7 @@ const OverlappingImage = ({ sectionData }) => {
                   <p className='text-base font-medium text-white'>
                     {story.primaryText}
                   </p>
-                  <p className='text-base font-medium text-indigo-100'>
+                  <p className='text-base font-medium text-blue-200'>
                     {story.secondaryText}
                   </p>
                 </footer>
