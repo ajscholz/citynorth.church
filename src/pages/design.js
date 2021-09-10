@@ -167,6 +167,35 @@ const defaultFeaturesData = {
           url: 'https://citynorthchurch.gatsbyjs.io/',
         },
       ],
+      images: [
+        {
+          image: {
+            gatsbyImageData: {
+              images: {
+                sources: [
+                  {
+                    srcSet:
+                      '//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=785&h=785&q=50&fm=webp 785w,\n//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=1570&h=1570&q=50&fm=webp 1570w,\n//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=3140&h=3140&q=50&fm=webp 3140w',
+                    sizes: '(min-width: 3140px) 3140px, 100vw',
+                    type: 'image/webp',
+                  },
+                ],
+                fallback: {
+                  src: '//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=3140&h=3140&fl=progressive&q=50&fm=jpg',
+                  srcSet:
+                    '//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=785&h=785&fl=progressive&q=50&fm=jpg 785w,\n//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=1570&h=1570&fl=progressive&q=50&fm=jpg 1570w,\n//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=3140&h=3140&fl=progressive&q=50&fm=jpg 3140w',
+                  sizes: '(min-width: 3140px) 3140px, 100vw',
+                },
+              },
+              layout: 'constrained',
+              backgroundColor: '#685858',
+              width: 3140,
+              height: 3140,
+            },
+          },
+          description: 'Andrew Scholz, Lead Pastor of City North Church',
+        },
+      ],
     },
     {
       id: '324ihjwefd80s98h',
@@ -185,6 +214,35 @@ const defaultFeaturesData = {
         {
           text: 'CTA Text',
           url: 'https://citynorthchurch.gatsbyjs.io/',
+        },
+      ],
+      images: [
+        {
+          image: {
+            gatsbyImageData: {
+              images: {
+                sources: [
+                  {
+                    srcSet:
+                      '//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=785&h=785&q=50&fm=webp 785w,\n//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=1570&h=1570&q=50&fm=webp 1570w,\n//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=3140&h=3140&q=50&fm=webp 3140w',
+                    sizes: '(min-width: 3140px) 3140px, 100vw',
+                    type: 'image/webp',
+                  },
+                ],
+                fallback: {
+                  src: '//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=3140&h=3140&fl=progressive&q=50&fm=jpg',
+                  srcSet:
+                    '//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=785&h=785&fl=progressive&q=50&fm=jpg 785w,\n//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=1570&h=1570&fl=progressive&q=50&fm=jpg 1570w,\n//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=3140&h=3140&fl=progressive&q=50&fm=jpg 3140w',
+                  sizes: '(min-width: 3140px) 3140px, 100vw',
+                },
+              },
+              layout: 'constrained',
+              backgroundColor: '#685858',
+              width: 3140,
+              height: 3140,
+            },
+          },
+          description: 'Andrew Scholz, Lead Pastor of City North Church',
         },
       ],
     },
@@ -207,6 +265,35 @@ const defaultFeaturesData = {
           url: 'https://citynorthchurch.gatsbyjs.io/',
         },
       ],
+      images: [
+        {
+          image: {
+            gatsbyImageData: {
+              images: {
+                sources: [
+                  {
+                    srcSet:
+                      '//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=785&h=785&q=50&fm=webp 785w,\n//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=1570&h=1570&q=50&fm=webp 1570w,\n//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=3140&h=3140&q=50&fm=webp 3140w',
+                    sizes: '(min-width: 3140px) 3140px, 100vw',
+                    type: 'image/webp',
+                  },
+                ],
+                fallback: {
+                  src: '//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=3140&h=3140&fl=progressive&q=50&fm=jpg',
+                  srcSet:
+                    '//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=785&h=785&fl=progressive&q=50&fm=jpg 785w,\n//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=1570&h=1570&fl=progressive&q=50&fm=jpg 1570w,\n//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=3140&h=3140&fl=progressive&q=50&fm=jpg 3140w',
+                  sizes: '(min-width: 3140px) 3140px, 100vw',
+                },
+              },
+              layout: 'constrained',
+              backgroundColor: '#685858',
+              width: 3140,
+              height: 3140,
+            },
+          },
+          description: 'Andrew Scholz, Lead Pastor of City North Church',
+        },
+      ],
     },
     {
       id: 'ihup23h098wyqh',
@@ -225,6 +312,35 @@ const defaultFeaturesData = {
         {
           text: 'CTA Text',
           url: 'https://citynorthchurch.gatsbyjs.io/',
+        },
+      ],
+      images: [
+        {
+          image: {
+            gatsbyImageData: {
+              images: {
+                sources: [
+                  {
+                    srcSet:
+                      '//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=785&h=785&q=50&fm=webp 785w,\n//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=1570&h=1570&q=50&fm=webp 1570w,\n//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=3140&h=3140&q=50&fm=webp 3140w',
+                    sizes: '(min-width: 3140px) 3140px, 100vw',
+                    type: 'image/webp',
+                  },
+                ],
+                fallback: {
+                  src: '//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=3140&h=3140&fl=progressive&q=50&fm=jpg',
+                  srcSet:
+                    '//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=785&h=785&fl=progressive&q=50&fm=jpg 785w,\n//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=1570&h=1570&fl=progressive&q=50&fm=jpg 1570w,\n//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=3140&h=3140&fl=progressive&q=50&fm=jpg 3140w',
+                  sizes: '(min-width: 3140px) 3140px, 100vw',
+                },
+              },
+              layout: 'constrained',
+              backgroundColor: '#685858',
+              width: 3140,
+              height: 3140,
+            },
+          },
+          description: 'Andrew Scholz, Lead Pastor of City North Church',
         },
       ],
     },
@@ -247,6 +363,35 @@ const defaultFeaturesData = {
           url: 'https://citynorthchurch.gatsbyjs.io/',
         },
       ],
+      images: [
+        {
+          image: {
+            gatsbyImageData: {
+              images: {
+                sources: [
+                  {
+                    srcSet:
+                      '//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=785&h=785&q=50&fm=webp 785w,\n//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=1570&h=1570&q=50&fm=webp 1570w,\n//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=3140&h=3140&q=50&fm=webp 3140w',
+                    sizes: '(min-width: 3140px) 3140px, 100vw',
+                    type: 'image/webp',
+                  },
+                ],
+                fallback: {
+                  src: '//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=3140&h=3140&fl=progressive&q=50&fm=jpg',
+                  srcSet:
+                    '//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=785&h=785&fl=progressive&q=50&fm=jpg 785w,\n//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=1570&h=1570&fl=progressive&q=50&fm=jpg 1570w,\n//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=3140&h=3140&fl=progressive&q=50&fm=jpg 3140w',
+                  sizes: '(min-width: 3140px) 3140px, 100vw',
+                },
+              },
+              layout: 'constrained',
+              backgroundColor: '#685858',
+              width: 3140,
+              height: 3140,
+            },
+          },
+          description: 'Andrew Scholz, Lead Pastor of City North Church',
+        },
+      ],
     },
     {
       id: '234iuwehjnfksdm',
@@ -265,6 +410,35 @@ const defaultFeaturesData = {
         {
           text: 'CTA Text',
           url: 'https://citynorthchurch.gatsbyjs.io/',
+        },
+      ],
+      images: [
+        {
+          image: {
+            gatsbyImageData: {
+              images: {
+                sources: [
+                  {
+                    srcSet:
+                      '//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=785&h=785&q=50&fm=webp 785w,\n//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=1570&h=1570&q=50&fm=webp 1570w,\n//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=3140&h=3140&q=50&fm=webp 3140w',
+                    sizes: '(min-width: 3140px) 3140px, 100vw',
+                    type: 'image/webp',
+                  },
+                ],
+                fallback: {
+                  src: '//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=3140&h=3140&fl=progressive&q=50&fm=jpg',
+                  srcSet:
+                    '//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=785&h=785&fl=progressive&q=50&fm=jpg 785w,\n//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=1570&h=1570&fl=progressive&q=50&fm=jpg 1570w,\n//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=3140&h=3140&fl=progressive&q=50&fm=jpg 3140w',
+                  sizes: '(min-width: 3140px) 3140px, 100vw',
+                },
+              },
+              layout: 'constrained',
+              backgroundColor: '#685858',
+              width: 3140,
+              height: 3140,
+            },
+          },
+          description: 'Andrew Scholz, Lead Pastor of City North Church',
         },
       ],
     },
@@ -287,6 +461,35 @@ const defaultFeaturesData = {
           url: 'https://citynorthchurch.gatsbyjs.io/',
         },
       ],
+      images: [
+        {
+          image: {
+            gatsbyImageData: {
+              images: {
+                sources: [
+                  {
+                    srcSet:
+                      '//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=785&h=785&q=50&fm=webp 785w,\n//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=1570&h=1570&q=50&fm=webp 1570w,\n//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=3140&h=3140&q=50&fm=webp 3140w',
+                    sizes: '(min-width: 3140px) 3140px, 100vw',
+                    type: 'image/webp',
+                  },
+                ],
+                fallback: {
+                  src: '//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=3140&h=3140&fl=progressive&q=50&fm=jpg',
+                  srcSet:
+                    '//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=785&h=785&fl=progressive&q=50&fm=jpg 785w,\n//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=1570&h=1570&fl=progressive&q=50&fm=jpg 1570w,\n//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=3140&h=3140&fl=progressive&q=50&fm=jpg 3140w',
+                  sizes: '(min-width: 3140px) 3140px, 100vw',
+                },
+              },
+              layout: 'constrained',
+              backgroundColor: '#685858',
+              width: 3140,
+              height: 3140,
+            },
+          },
+          description: 'Andrew Scholz, Lead Pastor of City North Church',
+        },
+      ],
     },
     {
       id: '12870894738274032',
@@ -305,6 +508,35 @@ const defaultFeaturesData = {
         {
           text: 'CTA Text',
           url: 'https://citynorthchurch.gatsbyjs.io/',
+        },
+      ],
+      images: [
+        {
+          image: {
+            gatsbyImageData: {
+              images: {
+                sources: [
+                  {
+                    srcSet:
+                      '//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=785&h=785&q=50&fm=webp 785w,\n//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=1570&h=1570&q=50&fm=webp 1570w,\n//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=3140&h=3140&q=50&fm=webp 3140w',
+                    sizes: '(min-width: 3140px) 3140px, 100vw',
+                    type: 'image/webp',
+                  },
+                ],
+                fallback: {
+                  src: '//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=3140&h=3140&fl=progressive&q=50&fm=jpg',
+                  srcSet:
+                    '//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=785&h=785&fl=progressive&q=50&fm=jpg 785w,\n//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=1570&h=1570&fl=progressive&q=50&fm=jpg 1570w,\n//images.ctfassets.net/hiqf9clqtwll/4bZRCZZEKNSj8aiW1uUApc/c695feeb6ba82386077d54ceea2e3f63/IMG_6979.jpg?w=3140&h=3140&fl=progressive&q=50&fm=jpg 3140w',
+                  sizes: '(min-width: 3140px) 3140px, 100vw',
+                },
+              },
+              layout: 'constrained',
+              backgroundColor: '#685858',
+              width: 3140,
+              height: 3140,
+            },
+          },
+          description: 'Andrew Scholz, Lead Pastor of City North Church',
         },
       ],
     },
