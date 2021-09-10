@@ -42,20 +42,20 @@ const Design = () => {
       <SEO index={false} />
 
       <div className='flex flex-col min-h-screen'>
-        <header className='bg-gray-800 w-full'>
+        {/* <header className='bg-gray-800 w-full'>
           <div className='flex justify-end py-8 px-6 md:px-12  text-gray-50'>
             <h2 className='flex-none text-2xl lg:text-4xl font-bold'>
               Design Page
-            </h2>
-            {/* <p className='flex-initial mt-6 text-gray-100 text-sm'>
+            </h2> */}
+        {/* <p className='flex-initial mt-6 text-gray-100 text-sm'>
               Use this page to view design options available to you. Browse by
               section type, then select a layout. You'll be able to to see what
               that specific section appearance will look like with dummy data,
               and you'll see different parameters for that section and
               appearance.
             </p> */}
-          </div>
-        </header>
+        {/* </div>
+        </header> */}
 
         <div className='flex flex-grow min-h-full'>
           <div className='flex flex-col flex-none w-64 pt-5 pb-4 bg-blue-500 overflow-y-auto'>
