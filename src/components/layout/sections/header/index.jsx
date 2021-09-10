@@ -1,13 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Component = () => null
+import SimpleCentered from './SimpleCentered'
+import SimpleDark from './SimpleDark'
+import BrandColorWithBackgroundImage from './BrandColorWithBackgroundImage'
 
 export const HEADER_APPEARANCES = {
-  'Simple Centered': (data) => <Component sectionData={data} />,
-  'Simple Dark': (data) => <Component sectionData={data} />,
+  'Simple Centered': (data) => <SimpleCentered sectionData={data} />,
+  'Simple Dark': (data) => <SimpleDark sectionData={data} />,
   'Brand Color With Background Image': (data) => (
-    <Component sectionData={data} />
+    <BrandColorWithBackgroundImage sectionData={data} />
   ),
 }
 
