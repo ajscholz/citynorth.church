@@ -1,12 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Component = () => null
+import WithSmallImages from './WithSmallImages'
+import WithVeritcalImages from './WithVeritcalImages'
+import GridWithRoundImages from './GridWithRoundImages'
 
 export const TEAM_APPEARANCES = {
-  'With Small Images': (data) => <Component sectionData={data} />,
-  'With Vertical Images': (data) => <Component sectionData={data} />,
-  'Grid With Round Images': (data) => <Component sectionData={data} />,
+  'With Small Images': (data) => <WithSmallImages sectionData={data} />,
+  'With Vertical Images': (data) => <WithVeritcalImages sectionData={data} />,
+  'Grid With Round Images': (data) => (
+    <GridWithRoundImages sectionData={data} />
+  ),
 }
 
 const TeamSection = ({ section }) => {
